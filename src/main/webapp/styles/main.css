@@ -1,0 +1,10 @@
+@font-face {
+	font-family: styleFont;
+	src: url('/fonts/GoodDog.otf');
+}
+
+#footer {
+	font-size:small;
+	font-face:styleFont;
+	color:#9955FF;
+}

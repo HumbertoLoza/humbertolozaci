@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+<h:body>
+	<ui:composition template="/WEB-INF/templates/main.xhtml">
+		<ui:define name="content">
+			<h:form id="regForm">
+				<p:growl id="growl"/>
+				<p:panelGrid columns="2">
+					<p:outputLabel value="#{msg['main.reg.name']} "></p:outputLabel>
+					<p:inputText id="Nombre" maxlength="50" required="true" value="#{app.name}"></p:inputText>
+					<p:outputLabel value="#{msg['main.reg.lastName']} "></p:outputLabel>
+					<p:inputText id="Apellido" maxlength="50" value="#{app.lastName}"></p:inputText>
+					<p:outputLabel value="#{msg['main.reg.mail']} "></p:outputLabel>
+					<p:inputText id="Mail" maxlength="50" required="true" value="#{app.mail}"></p:inputText>
+					<p:outputLabel value="#{msg['main.reg.user']} "></p:outputLabel>
+					<p:inputText id="Usuario" maxlength="50" required="true" value="#{app.user}"></p:inputText>
+					<p:outputLabel value="#{msg['main.reg.password']} "></p:outputLabel>
+					<p:password id="Password" maxlength="50" required="true" value="#{app.password}"></p:password>
+				</p:panelGrid>
+				<p:commandButton update="growl" value="#{msg['main.reg.create']}"
+				action="#{app.createUser}" id="submitBtn" />
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,22 @@
+@font-face {
+	font-family: styleFont;
+	src: url('#{resource['fonts/GoodDog.otf']}');
+}
+
+#footer {
+	font-size:medium;
+	font-family:styleFont;
+	color:#3465a4;
+	text-align:right;
+}
+
+#header {
+	font-size:xx-large;
+	font-family:styleFont;
+	
+}
+
+#header a:link,a:visited{
+	color:#000;
+	text-decoration:none;
+}

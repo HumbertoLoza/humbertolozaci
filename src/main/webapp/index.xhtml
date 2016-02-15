@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+<h:body>
+	<ui:composition template="/WEB-INF/templates/main.xhtml">
+		<ui:define name="content">
+			<p:panel>
+				<h:form>
+					<p:panelGrid>
+						<p:row>
+							<p:column>
+								<p:outputLabel value="#{msg['main.reg.user']}"></p:outputLabel>
+							</p:column>
+							<p:column>
+								<p:inputText value="#{app.user}"></p:inputText>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<p:outputLabel value="#{msg['main.reg.password']}"></p:outputLabel>
+							</p:column>
+							<p:column>
+								<p:password value="#{app.password}"></p:password>
+							</p:column>
+						</p:row>
+					</p:panelGrid>
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<div>
+						<p:commandButton value="#{msg['main.continue']}" action="#{app.authenticateUser}"></p:commandButton>
+						<p:commandLink style="position:relative; float:right;" action="registro" value="#{msg['main.register']}" />
+					</div>
+				</h:form>
+			</p:panel>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
